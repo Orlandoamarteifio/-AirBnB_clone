@@ -1093,8 +1093,8 @@ class TestHBNBCommand_update(unittest.TestCase):
         with patch("sys.stdout", new=StringIO()) as output:
             testCmd = "update User {} attr_name".format(testId)
             self.assertFalse(HBNBCommand().onecmd(testCmd))
-              self.assertFalse(HBNBCommand().onecmd(testCmd))
-                 self.assertEqual(correct, output.getvalue().strip())
+            self.assertFalse(HBNBCommand().onecmd(testCmd))
+            self.assertEqual(correct, output.getvalue().strip())
         with patch("sys.stdout", new=StringIO()) as output:
             HBNBCommand().onecmd("create State")
             testId = output.getvalue().strip()
